@@ -1,0 +1,1852 @@
+/* FUENTES */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFFFFF;
+    color: #1a1a1a;
+}
+
+/* TITULOS CON BLACK MANGO */
+
+h1, h2, h3 {
+    font-family: 'Black Mango', serif;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+/* ==========================================================================
+   HEADER FIJO (ESTILO EDITORIAL PREMIUM - COMPLETO Y CORREGIDO)
+   ========================================================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Altura elegante y controlada */
+    background-color: rgba(255, 255, 255, 0.92); /* Blanco con transparencia fina */
+    backdrop-filter: blur(10px); /* Efecto difuminado de alta gama */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04); /* Línea de división ultra delgada */
+    box-sizing: border-box;
+}
+
+/* LOGO */
+.logo-area img {
+    display: block;
+    width: 100%;
+    max-width: 85px; /* Mantiene el logo en su proporción justa */
+    height: auto;
+}
+
+/* NAVEGACIÓN PRINCIPAL */
+nav.nav-principal {
+    display: flex;
+    align-items: center; /* Alinea todos los textos perfectamente al centro vertical */
+    gap: 28px; /* Mayor separación tipográfica */
+    flex-wrap: nowrap; /* Evita roturas accidentales en pantallas medianas */
+}
+
+/* Aplica el estilo de texto limpio a TODOS los enlaces dentro de nav.nav-principal */
+nav.nav-principal a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif; /* Tu tipografía limpia corporativa */
+    font-size: 12px; /* Escala tipográfica compacta y sofisticada */
+    font-weight: 600;
+    text-transform: uppercase; /* Estilo de cabecera editorial */
+    letter-spacing: 1.5px; /* Expansión intencional de caracteres */
+    color: #555555; /* Tu gris suave para estado pasivo */
+    position: relative;
+    padding: 4px 0;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+    background: none !important; /* Elimina cualquier rastro o residuo de botón */
+    border: none !important;     /* Elimina bordes residuales */
+}
+
+/* Efecto hover unificado para todos los enlaces del menú */
+nav.nav-principal a:hover {
+    color: #111111; /* Negro sólido de la marca al pasar el cursor */
+}
+
+/* ==========================================================================
+   AJUSTES DE SCROLL MARGIN (NAVEGACIÓN INTERNA EXACTA)
+   ========================================================================== */
+
+#home {
+    height: 1px;
+    scroll-margin-top: 180px;
+}
+
+#planes-anchor {
+    scroll-margin-top: 100px;
+}
+
+#testimonios {
+    scroll-margin-top: 120px;
+}
+
+#educacion {
+    scroll-margin-top: 50px;
+}
+
+#consulta-funcionamiento {
+    scroll-margin-top: 100px;
+}
+
+
+/* ESTRUCTURA DE SECCIONES GENERALES */
+.section {
+    padding: 140px 40px 80px; /* Equilibrio de espacio para el header fijo */
+    scroll-margin-top: 140px;
+    box-sizing: border-box;
+}
+
+/* CONTACTO */
+.contact-info {
+    font-family: 'Montserrat', sans-serif;
+    color: #555555;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS Y SMARTPHONES)
+   ========================================================================== */
+
+   /* TABLET (Menor a 900px) */
+@media (max-width: 900px) {
+    .header {
+        padding: 15px 30px;
+    }
+
+    nav.nav-principal {
+        gap: 18px;
+    }
+
+    nav.nav-principal a {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .logo-area img {
+        max-width: 75px;
+    }
+
+    /* Header ~135–150px → margen proporcional */
+    .section {
+        padding-top: 160px;
+        scroll-margin-top: 160px;
+    }
+}
+
+/* MOBILE (Menor a 600px) */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 14px;
+        padding: 18px 20px;
+    }
+
+    nav.nav-principal {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav.nav-principal a {
+        font-size: 11px;
+        letter-spacing: 0.8px;
+    }
+
+    .logo-area img {
+        max-width: 70px;
+    }
+
+    /* Header en dos filas ~170–185px */
+    .section {
+        padding-top: 185px;
+        scroll-margin-top: 185px;
+    }
+}
+
+/* MOBILE MINI (Menor a 400px) */
+@media (max-width: 400px) {
+    nav.nav-principal {
+        gap: 10px;
+    }
+
+    nav.nav-principal a {
+        font-size: 10px;
+    }
+
+    .logo-area img {
+        max-width: 65px;
+    }
+
+    /* Header más alto por wrapping → coherencia con mobile */
+    .section {
+        padding-top: 200px;
+        scroll-margin-top: 200px;
+    }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HERO — ESTRUCTURA GENERAL (ESTILO EDITORIAL DESKTOP)
+   ========================================================================== */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea verticalmente el texto con el centro de la imagen */
+    padding: 40px 40px;
+    gap: 40px;
+    margin-top: 120px;
+    max-width: 1200px; /* Evita que se deforme en pantallas gigantes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-family: 'Black Mango', serif; /* Tu fuente premium */
+    font-size: 44px;
+    line-height: 1.15; /* Título más compacto y elegante */
+    margin-bottom: 20px;
+    color: #111111;
+}
+
+.hero-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555555;
+    font-weight: 300;
+}
+
+.hero-img-placeholder {
+    width: 50%;
+    height: auto; /* Permite que la imagen maneje su proporción premium */
+    max-height: 450px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hero-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cambiado a cover para que llene el contenedor premium con elegancia */
+    border-radius: 12px;
+}
+
+/* ==========================================================================
+   HERO SOCIALS — ESTILO EDITORIAL (DESKTOP)
+   ========================================================================== */
+
+.hero-socials {
+    display: flex;
+    justify-content: flex-start; /* Alineado a la izquierda con el texto */
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.hero-socials a {
+    color: #555555; /* Gris minimalista unificado */
+    transition: color 0.3s ease;
+}
+
+.hero-socials a:hover {
+    color: #111111; /* Oscurece sutilmente en hover */
+}
+
+/* ==========================================================================
+   BOTÓN PRINCIPAL HERO (ESTILO EDITORIAL PREMIUM)
+   ========================================================================== */
+
+.botonver {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    color: #555555;
+    position: relative;
+    padding-bottom: 12px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-top: 10px;
+}
+
+/* Línea decorativa inferior (Estado Inicial) */
+.botonver::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: #CFE8F3; /* Tu azul de acento */
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s ease;
+}
+
+/* Estado Hover (Expansión) */
+.botonver:hover {
+    color: #111111;
+    letter-spacing: 3.5px;
+}
+
+.botonver:hover::after {
+    width: 100%;
+    background-color: #111111;
+}
+
+/* ==========================================================================
+   RESPONSIVE — COMPORTAMIENTO MÓVILES Y TABLETS (< 899px)
+   ========================================================================== */
+
+@media (max-width: 899px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 24px 40px 24px;
+        gap: 1.8rem;
+        margin-top: 80px; /* Menos espacio superior en móviles */
+    }
+
+    /* Rompe la caja para permitir que la imagen se coloque en medio */
+    .hero-text {
+        display: contents; 
+    }
+
+    /* Asignación del orden perfecto en la lectura vertical */
+    .hero h1 {
+        order: 1;
+        font-size: clamp(28px, 6vw, 36px); /* Responsivo y controlado */
+        margin-bottom: 0.5rem;
+        max-width: 100%;
+    }
+
+    .hero p {
+        order: 2;
+        font-size: 15px;
+        margin-bottom: 1rem;
+        padding: 0 10px;
+    }
+
+    .botonver {
+        order: 3;
+        margin-bottom: 2rem;
+        align-self: center; /* Centra perfectamente el botón y su línea azul */
+    }
+
+    /* La imagen ahora baja de forma impecable al cuarto lugar */
+    .hero-img-placeholder {
+        order: 4;
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+    }
+
+    /* Las redes sociales cierran la sección abajo de la foto */
+    .hero-socials {
+        order: 5;
+        display: flex;
+        justify-content: center; /* Centradas en pantallas chicas */
+        gap: 1.6rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ajustes mínimos finales para pantallas ultra chicas */
+@media (max-width: 450px) {
+    .hero {
+        padding: 40px 20px;
+    }
+    .hero-img-placeholder {
+        height: 240px;
+    }
+}
+
+
+
+/* ==========================================================================
+   SECCIÓN BENEFICIOS (WHY) - ESTILO EDITORIAL PREMIUM
+   ========================================================================== */
+
+.why-editorial {
+    padding: 100px 40px;
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    color: #111111;
+}
+
+.why-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Encabezado elegante */
+.why-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+
+.why-header h2 {
+    font-family: 'Black Mango', serif;
+    font-size: clamp(32px, 4vw, 38px);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Grid Editorial Alternativo */
+.why-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px; /* Más separación entre filas que columnas */
+}
+
+/* Tarjetas refinadas basadas en tipografía y líneas, no en bloques pesados de color */
+.why-item-premium {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-top: 2px solid #CFE8F3; /* Tu azul como un acento lineal premium arriba */
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.why-item-premium:hover {
+    border-top-color: #111111; /* La línea se vuelve negra al pasar el mouse */
+    transform: translateY(-3px);
+}
+
+.why-item-premium h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111111;
+    margin-top: 0;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.why-item-premium p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555555;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE (TABLETS Y MÓVILES)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .why-grid-premium {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .why-editorial {
+        padding: 80px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-grid-premium {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .why-header h2 {
+        font-size: 28px;
+    }
+    .why-item-premium {
+        padding: 20px 10px;
+    }
+}
+
+
+/* planes */
+
+
+:root {
+  --accent-color: #CFE8F3;
+  --dark-text: #1a1a1a;
+  --light-text: #555;
+  --white: #ffffff;
+  --border: #e0e0e0;
+}
+
+.pricing-editorial {
+  font-family: 'Montserrat', serif; /* Toque editorial clásico */
+  padding: 0px 20px;
+  background-color: var(--white);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--light-text);
+  margin-bottom: 10px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.brand-promise {
+  
+  font-size: 1.1rem;
+  color: var(--light-text);
+}
+
+/* Grid de Precios */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.price-card {
+  padding: 40px;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card.featured {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 0.7rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  background: var(--dark-text);
+  color: var(--white);
+  padding: 4px 10px;
+}
+
+.price-amount {
+  font-size: 3.5rem;
+  margin: 20px 0;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+.currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+.promo-tag {
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 40px 0;
+  flex-grow: 1;
+}
+
+.features li {
+  padding: 10px 0;
+  border-bottom: 0.5px solid rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+}
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--dark-text);
+  color: var(--white);
+  padding: 15px 25px;
+  text-align: center;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: opacity 0.3s;
+}
+
+.price-card.featured .cta-button {
+  background-color: var(--white);
+  color: var(--dark-text);
+}
+
+.cta-button:hover {
+  opacity: 0.8;
+}
+
+/* Footer de la sección */
+.pricing-footer {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding-top: 40px;
+}
+
+.urgency {
+  font-size: 0.9rem;
+  color: #c0392b; /* Un toque sutil de alerta */
+  margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main-title { font-size: 1.8rem; }
+  .price-card { padding: 25px; }
+}
+
+
+
+/* ==========================================================================
+   SECCIÓN EDUCACIÓN 
+   ========================================================================== */
+
+.educacion-editorial {
+    background-color: #ffffff;
+    padding: 120px 40px; /* Más espacio para que el diseño respire de forma premium */
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a;
+}
+
+.educacion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Encabezado Principal (Filosofía / Manifiesto Camuflado) */
+.educacion-header {
+    max-width: 800px; /* Restringimos el ancho para que el texto sea cómodo de leer */
+    margin: 0 auto 80px auto; /* Gran separación antes de las tarjetas */
+    text-align: center;
+}
+
+
+.edu-titulo-principal {
+    font-family: 'Black Mango', serif; /* Tu tipografía elegante principal */
+    font-size: clamp(32px, 4vw, 48px); /* Responsivo y de gran impacto visual */
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #111111;
+}
+
+.edu-descripcion-filosofica {
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #4a4a4a;
+}
+
+/* Grid de Tres Columnas Líquidas */
+.educacion-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* Mayor separación interna */
+}
+
+/* Tarjetas Educativas */
+.edu-card-premium {
+    background-color: #CFE8F3; /* Tu color base azul pastel */
+    padding: 40px 35px;
+    border-radius: 4px; /* Bordes casi rectos, más sofisticados que los muy redondeados */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+
+.edu-numero {
+    font-family: 'Black Mango', serif;
+    font-size: 28px;
+    color: #111111;
+    opacity: 0.4;
+    margin-bottom: 25px;
+}
+
+.edu-card-premium h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #111111;
+    letter-spacing: -0.5px;
+}
+
+.edu-card-premium p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #333333;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MÓVILES Y TABLETS)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .educacion-grid-premium {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        gap: 30px;
+    }
+    .educacion-editorial {
+        padding: 80px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .educacion-grid-premium {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+    .educacion-header {
+        margin-bottom: 50px;
+    }
+    .edu-titulo-principal {
+        font-size: 28px;
+    }
+}
+
+
+
+/* =========================================================
+   SECCIÓN: CÓMO FUNCIONA TU CONSULTA
+   ========================================================= */
+
+.consulta-funcionamiento {
+    padding: 60px 0;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================================================
+   LAYOUT EDITORIAL
+   ========================================================= */
+
+.consulta-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    padding: 0 40px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   HEADER PRINCIPAL
+   ========================================================= */
+
+.consulta-funcionamiento__header h2 {
+    font-family: 'Black Mango', serif;
+    font-size: clamp(32px, 3.5vw, 42px);
+    font-weight: 400;
+    margin-bottom: 45px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   BLOQUES INFORMATIVOS
+   ========================================================= */
+
+.consulta-bloque {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.consulta-bloque:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/* =========================================================
+   SUBTÍTULOS
+   ========================================================= */
+
+.consulta-bloque h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+    color: #111111;
+}
+
+
+/* =========================================================
+   PÁRRAFOS
+   ========================================================= */
+
+.consulta-bloque p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 18px;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   LISTAS
+   ========================================================= */
+
+.consulta-bloque ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.consulta-bloque li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 24px;
+    font-weight: 300;
+}
+
+.consulta-bloque li strong {
+    font-weight: 600;
+    color: #111111;
+}
+
+
+/* =========================================================
+   BULLETS EDITORIALES
+   ========================================================= */
+
+.consulta-bloque li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    background: #CFE8F3;
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   IMÁGENES — COMPOSICIÓN EDITORIAL
+   ========================================================= */
+
+.consulta-imagen {
+    position: relative;
+    height: 560px;
+    width: 88%;
+}
+
+.consulta-imagen img {
+    display: block;
+    transition:
+        transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+        box-shadow 0.4s ease;
+    border-radius: 2px;
+}
+
+
+/* Imagen principal */
+
+.consulta-imagen img:first-child {
+    width: 85%;
+    height: 90%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+/* Imagen secundaria */
+
+.consulta-imagen img:last-child {
+    width: 55%;
+    height: 60%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.05);
+
+    border: 6px solid #ffffff;
+}
+
+
+/* =========================================================
+   EFECTO HOVER — ESCRITORIO
+   ========================================================= */
+
+@media (min-width: 993px) {
+
+    .consulta-imagen img:first-child:hover {
+        transform: translateY(-5px);
+    }
+
+    .consulta-imagen img:last-child:hover {
+        transform: translateY(-7px);
+        box-shadow:
+            0 25px 45px rgba(0, 0, 0, 0.10);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   992px
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .consulta-funcionamiento {
+        padding: 70px 0;
+    }
+
+    .consulta-layout {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 0 40px;
+        max-width: 800px;
+    }
+
+    .consulta-funcionamiento__header h2 {
+        font-size: clamp(32px, 5vw, 40px);
+        margin-bottom: 40px;
+    }
+
+    /*
+     * En tablet las imágenes pasan debajo
+     * del contenido y conservan la composición editorial.
+     */
+
+    .consulta-imagen {
+        width: 100%;
+        max-width: 650px;
+        height: 520px;
+        margin: 0 auto;
+    }
+
+    .consulta-imagen img:first-child {
+        width: 78%;
+        height: 88%;
+        right: 0;
+        top: 0;
+    }
+
+    .consulta-imagen img:last-child {
+        width: 48%;
+        height: 58%;
+        left: 0;
+        bottom: 0;
+        border-width: 6px;
+    }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    .consulta-imagen {
+        width: 100%;
+        max-width: 650px;
+        height: 520px;
+        margin: 0 auto;
+    }
+
+    .consulta-imagen img:first-child {
+        width: 82%;
+        height: 82%;
+        right: 0;
+        top: 0;
+    }
+
+    .consulta-imagen img:last-child {
+        width: 52%;
+        height: 62%;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .consulta-imagen {
+        width: 100%;
+        height: 430px;
+        max-width: 500px;
+        margin: 10px auto 0;
+    }
+
+    .consulta-imagen img:first-child {
+        width: 60%;
+        height: 82%;
+        top: 0;
+        right: 0;
+
+        border-radius: 5px;
+    }
+
+    .consulta-imagen img:last-child {
+        width: 53%;
+        height: 60%;
+        left: 0;
+        bottom: 0;
+
+        border-width: 5px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .consulta-imagen {
+        height: 350px;
+    }
+
+    .consulta-imagen img:first-child {
+        width: 82%;
+        height: 82%;
+    }
+
+    .consulta-imagen img:last-child {
+        width: 52%;
+        height: 59%;
+        border-width: 4px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   BOTÓN GENERAL WHATSAPP (ESTILO EDITORIAL PREMIUM)
+   ========================================================================== */
+
+.cta-center {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 100px; /* Conserva tu margen inferior */
+    margin-top: 10px;    /* Conserva tu posición original */
+}
+
+.cta-wapp {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif; /* Usamos la fuente que ya tienes cargada */
+    font-size: 13px; /* Medida fija y limpia, común en firmas editoriales */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: #555555; /* Tu color de texto suave */
+    position: relative;
+    padding-bottom: 12px;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Transición premium más fluida */
+}
+
+/* Línea decorativa inferior (Estado Inicial) */
+.cta-wapp::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Centrada perfectamente */
+    transform: translateX(-50%);
+    width: 40px; 
+    height: 2px;
+    background-color: #CFE8F3; /* Tu color azul pastel de acento */
+    transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s ease;
+}
+
+/* Estado Hover (Interacción) */
+.cta-wapp:hover {
+    color: #111111; /* Se oscurece al negro de tu paleta principal */
+    letter-spacing: 3.5px; /* Crea ese dinamismo sofisticado de expansión */
+}
+
+.cta-wapp:hover::after {
+    width: 100%; /* La línea se expande a lo ancho de todo el texto */
+    background-color: #111111; /* La línea hace match con el color del texto activo */
+}
+
+
+
+
+/* ==========================================================================
+   SECCIÓN TESTIMONIOS & HISTORIAS DE ÉXITO (ESTILO EDITORIAL PREMIUM)
+   ========================================================================== */
+
+.testimonios-nutricion {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff; /* Fondo limpio para un look editorial de alta gama */
+    color: #111111;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 24px;
+    margin-top: -20px;
+}
+
+/* ==========================================================================
+   ENCABEZADO DE SECCIÓN
+   ========================================================================== */
+
+.testimonios-header {
+    max-width: 750px;
+    margin: 0 auto 5rem auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.testimonios-header .sub-premium {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.testimonios-header h2 {
+    font-family: 'Black Mango', serif;
+    font-size: clamp(32px, 3.8vw, 44px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #111111;
+}
+
+.testimonios-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #555555;
+    margin: 0;
+}
+
+/* ==========================================================================
+   CARRUSEL (COMPORTAMIENTO MÓVIL POR DEFECTO)
+   ========================================================================== */
+
+.testimonios-carrusel {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0.5rem;
+    scroll-padding-left: 0.5rem;
+}
+
+.testimonios-carrusel::-webkit-scrollbar {
+    display: none; /* Oculta barra en móvil para limpieza visual */
+}
+
+/* ==========================================================================
+   TARJETAS (ESTRUCTURA E INTERACCIÓN SUAVE)
+   ========================================================================== */
+
+.testimonio-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    /* Configuración de ancho base para carrusel móvil */
+    flex: 0 0 75%;
+    max-width: 320px;
+    min-width: 260px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+
+    /* Animación fluida de sombra de fondo (Sin saltos de transform) */
+    transition: box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: box-shadow;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.testimonio-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06); /* Elevación óptica premium */
+}
+
+/* IMAGEN (Estilo Editorial Proporcional) */
+.testimonio-imagen {
+    width: 100%;
+    aspect-ratio: 3 / 4; 
+    overflow: hidden;
+    background: #edf5f8;
+    flex-shrink: 0;
+}
+
+.testimonio-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTENIDO INTERNO DE TARJETA */
+.testimonio-contenido {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonio-contenido h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #111111; /* Negro sólido de tu identidad visual */
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+/* Badge de Estado / Resultado */
+.testimonio-resultado {
+    align-self: flex-start;
+    background: #eef7fb;
+    color: #3b5e6c;
+    border: 1px solid #cfe8f3; /* Tu azul pastel de acento */
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+
+/* Lista de Métricas de Éxito */
+.testimonio-texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555555;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (ADAPTACIÓN POR BREAKPOINTS)
+   ========================================================================== */
+
+/* TABLET (768px a 1023px) */
+@media (min-width: 768px) {
+    .testimonio-card {
+        min-width: 290px;
+        max-width: 320px;
+        flex: 0 0 300px;
+    }
+}
+
+/* DESKTOP (A partir de 1024px) */
+@media (min-width: 1024px) {
+    .testimonios-nutricion {
+        padding: 6rem 2rem;
+    }
+
+    .testimonios-carrusel {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas perfectas fijas */
+        gap: 2rem;
+        overflow: visible;
+        padding: 0;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .testimonio-card {
+        min-width: auto;
+        width: 100%;
+        max-width: 320px; 
+        flex: initial;
+    }
+}
+
+/* PANTALLAS GRANDES (> 1400px) */
+@media (min-width: 1400px) {
+    .testimonios-carrusel {
+        gap: 2.5rem;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+/* AJUSTES PARA MÓVILES PEQUEÑOS (< 576px) */
+@media (max-width: 576px) {
+    .testimonios-nutricion {
+        padding: 4rem 1rem;
+    }
+
+    .testimonios-header {
+        margin-bottom: 3.5rem;
+    }
+
+    .testimonios-carrusel {
+        gap: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .testimonio-card {
+        min-width: 260px;
+        max-width: 280px;
+        flex: 0 0 270px;
+    }
+
+    .testimonio-contenido {
+        padding: 1.2rem;
+    }
+
+    .testimonio-texto {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+
+
+
+/* ==========================================================================
+    SNACKS
+   ========================================================================== */
+:root {
+  --azul-acento: #CFE8F3;
+  --negro-puro: #111111;
+  --gris-editorial: #555555;
+  --blanco: #ffffff;
+}
+
+.catalogo-premium {
+  background-color: var(--blanco);
+  padding: 80px 40px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: -20px;
+}
+
+.catalogo-premium .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- SECCIÓN LOGO --- */
+.header-logo {
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.logo-img {
+  width: 190px; 
+  height: auto;
+  display: inline-block;
+}
+
+/* --- NUEVA MAQUETACIÓN EDITORIAL (IMAGEN GRANDE CENTRAL) --- */
+.layout-editorial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.columna-texto {
+  text-align: center; /* Centrado sofisticado para la introducción */
+  max-width: 750px; /* Acota el bloque de texto para mantener la legibilidad de revista */
+  margin: 0 auto;
+}
+
+/* Tagline Superior */
+.columna-texto .sub-premium {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+
+
+/* Bloque Descriptivo */
+.descripcion-marca {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--gris-editorial);
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* --- CONTENEDOR DEL BOTÓN --- */
+.wrapper-contacto {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Enlace Textual Premium */
+.link-whatsapp-editorial {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--gris-editorial);
+  position: relative;
+  padding-bottom: 12px;
+  display: inline-block;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.link-whatsapp-editorial::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px; 
+  height: 2px;
+  background-color: var(--azul-acento);
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.4s ease;
+}
+
+.link-whatsapp-editorial:hover {
+  color: var(--negro-puro);
+  letter-spacing: 3.5px;
+}
+
+.link-whatsapp-editorial:hover::after {
+  width: 100%;
+  background-color: var(--negro-puro);
+}
+
+/* ==========================================================================
+   MANEJO DE IMAGEN EXPANSIBLE DE GRAN TAMAÑO (MENÚ 100% LEGIBLE)
+   ========================================================================== */
+.visual-wrapper {
+  position: relative;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  max-width: 1000px; /* CRECIMIENTO: Ahora se abre majestuosamente en desktop */
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Marco sutil azul de fondo que enmarca el menú gigante */
+.acento-decorativo {
+  position: absolute;
+  top: 0;
+  left: 4%;
+  width: 92%;
+  height: 100%;
+  background-color: var(--azul-acento);
+  z-index: 1;
+  border-radius: 16px;
+}
+
+.imagen-box {
+  position: relative;
+  z-index: 2;
+  background-color: var(--blanco);
+  padding: 30px; /* Más aire blanco simulando papel editorial */
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  text-align: center;
+}
+
+/* Indicador de texto sutil abajo de la imagen */
+.indicador-zoom {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gris-editorial);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+
+
+.img-producto {
+  width: 95%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLETS Y MÓVILES)
+   ========================================================================== */
+
+@media (max-width: 899px) {
+  .catalogo-premium {
+    padding: 60px 24px;
+  }
+
+  .layout-editorial {
+    gap: 35px;
+  }
+
+  .titulo-editorial {
+    font-size: clamp(28px, 5vw, 36px);
+    margin-bottom: 18px;
+  }
+
+  .visual-wrapper {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .imagen-box {
+    padding: 15px;
+  }
+
+  .acento-decorativo {
+    left: 2%;
+    width: 96%;
+    border-radius: 12px;
+  }
+
+  .indicador-zoom {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+}
+
+/* ==========================================================================
+   AGREGADO: SISTEMA DE MODAL EMERGENTE PARA EVITAR DUPLICADO
+   ========================================================================== */
+.snack-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.85); /* Fondo oscuro translúcido */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Esto oculta el modal por defecto */
+  opacity: 0;
+  pointer-events: none; 
+  
+  transition: opacity 0.4s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Activa el modal solo cuando se le da clic a expandir */
+.snack-modal-overlay:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Fondo invisible para cerrar si hacen clic fuera de la ventana */
+.modal-bg-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+/* Tarjeta contenedora blanca del menú expandido */
+.snack-modal-content {
+  position: relative;
+  background-color: var(--blanco);
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 16px;
+  padding: 40px 20px 20px 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.snack-modal-overlay:target .snack-modal-content {
+  transform: translateY(0);
+}
+
+/* Imagen grande dentro de la ventana flotante */
+.img-modal-grande {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Botón flotante para Cerrar (✕) */
+.btn-cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--gris-editorial);
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.btn-cerrar-modal:hover {
+  color: var(--negro-puro);
+}
+
+
+
+
+
+
+/* CTA */
+.footer-cta {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.boton-elegante {
+  display: inline-block;
+  padding: 18px 40px;
+  background-color: var(--texto-principal);
+  color: var(--blanco);
+  text-decoration: none;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--texto-principal);
+}
+
+.boton-elegante:hover {
+  background-color: transparent;
+  color: var(--texto-principal);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .titulo-seccion { font-size: 2rem; }
+  .imagen-contenedor { padding: 15px; }
+  .catalogo-editorial { padding: 40px 15px; }
+}
+
+
+/* ============================================================
+   FOOTER MINIMALISTA BLANCO
+   ============================================================ */
+.footer {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Fondo blanco puro */
+    border-top: 1px solid #f0f0f0; /* Línea muy sutil para separar del cuerpo */
+    margin-top: 80px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* DISTRIBUCIÓN HORIZONTAL */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-brand img {
+    max-width: 95px;
+    height: auto;
+    display: block;
+    opacity: 0.9; /* Suaviza el logo contra el blanco */
+}
+
+/* CONTENEDOR DE ICONOS */
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-socials a {
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    opacity: 0.8; /* Estado reposo elegante */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* COLORES DE ICONOS PARA FONDO BLANCO */
+.insta-link {
+    color: #555555; /* Gris minimalista unificado */
+    transition: color 0.3s ease;
+} /* Magenta clásico de Instagram */
+
+
+.email-link {
+    color: #555555; /* Gris minimalista unificado */
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+}
+
+/* LÍNEA FINAL (COPYRIGHT) */
+.footer-bottom {
+    width: 100%;
+    padding-top: 25px;
+    border-top: 1px solid #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 500;
+    color: #888888; /* Gris suave para que no compita con el logo */
+    margin: 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+}
